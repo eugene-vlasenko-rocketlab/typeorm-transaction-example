@@ -1,0 +1,23 @@
+meta {
+  name: Create User (Non-Transactional)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/user/non-transactional
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "bio": "Software Developer"
+  }
+}
